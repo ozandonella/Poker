@@ -54,7 +54,7 @@ public class Player {
 		folded=false;
 	}
 	public String[] getFooter(){
-		return (String.format("Money: $%,-174.2f   Goal: $%,.2f%n",(double)money/100,1000000f)+centerX(name,"/")).split("\n");
+		return (String.format("Money: $%,-174.2f   Goal: $%,.2f\n",(double)money/100,1000000f)+centerX(name,"/")).split("\n");
 	}
 	
 }
