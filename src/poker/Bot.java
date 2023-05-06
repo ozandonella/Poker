@@ -72,13 +72,10 @@ public class Bot {
     }
     public int getCurrentBet(int minBet, int maxBet) {
         maxBet=Math.max(minBet,maxBet);
-        System.out.println("minbet: "+minBet+" maxbet: "+maxBet+" allocatedbet: "+allocatedBet);
         if(minBet>allocatedBet) return Math.min(minBet,money);
         double mult = bluffing ? .2*Math.random() : Math.random();
         int b = (allocatedBet-minBet)/2+minBet;
-        System.out.println("rawbet b : "+b);
         if (b-minBet >= money/10) b-=((b-minBet)*mult);
-        System.out.println("bet b : "+b);
         if (b-minBet <= money/10) return Math.random()>.8 ? Math.min(b,maxBet) : minBet;
         return Math.random()>.3 ? Math.min(b,maxBet) : minBet;
     }
