@@ -49,11 +49,11 @@ public class Game {
     }
     public void adjustScreen() {
         screen.writeLine("/"+fillX("-",X-2)+"\\",0);
-        screen.fillY("|"+getXBlank(X-2)+"|",0,Y/2-2);
+        screen.fillY("|"+getXBlank(X-2)+"|",1,Y/2-2);
         screen.writeLine("|"+getXBlank(83)+"Adjust console to these constraints"+getXBlank(83)+"|",Y/2-1);
-        screen.writeLine("|"+getXBlank(76)+"(input any character and press enter to continue)"+getXBlank(76), Y/2);
-        screen.writeLine("|"+getXBlank(96)+"[CONTINUE]"+getXBlank(95), Y/2+1);
-        screen.fillY("|"+getXBlank(X-2)+"|",Y/2,Y-2);
+        screen.writeLine("|"+getXBlank(76)+"(input any character and press enter to continue)"+getXBlank(76)+"|", Y/2);
+        screen.writeLine("|"+getXBlank(96)+"[CONTINUE]"+getXBlank(95)+"|", Y/2+1);
+        screen.fillY("|"+getXBlank(X-2)+"|",Y/2+2,Y-2);
         screen.writeLine("\\"+fillX("-",X-2)+"/",Y-1);
         screen.printScreen();
         screen.clearScreen();

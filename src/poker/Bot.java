@@ -85,8 +85,6 @@ public class Bot {
     }
     public void allocateBet(){
         double mult = bluffing ? Math.max(odds+Math.random()*.5,.65) : odds;
-        System.out.println("bet allocating");
-        System.out.println("mult: "+mult+" money: "+money);
         int round = (int) ((money*mult)/2);
         allocatedBet = round==0 ? money : round;
     }
